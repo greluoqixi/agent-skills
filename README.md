@@ -21,13 +21,13 @@ Then install any Claude Code plugin:
 **Codex CLI:**
 
 ```bash
-codex plugin marketplace add greluoqixi/agent-skills
+codex plugin add greluoqixi/agent-skills
 ```
 
 Then install any Codex plugin:
 
 ```bash
-codex plugin install agents-md-generator@agent-skills
+codex plugin add agents-md-generator@agent-skills
 ```
 
 ## Plugins
@@ -69,7 +69,7 @@ ln -s $(pwd)/agent-skills/plugins/agents-md-generator/skills/agents-md-generator
 2. Add manifest: `.claude-plugin/plugin.json` for Claude Code, `.codex-plugin/plugin.json` for Codex CLI
 3. Add skills under `plugins/<name>/skills/`
 4. Register in `.claude-plugin/marketplace.json`
-5. Commit and push — users get updates via `/plugin marketplace update` (Claude Code) or `codex plugin marketplace update` (Codex CLI)
+5. Commit and push — users get updates via `/plugin marketplace update` (Claude Code) or `codex plugin update` (Codex CLI)
 
 ## Repository Structure
 
