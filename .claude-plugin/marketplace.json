@@ -1,0 +1,19 @@
+{
+  "name": "claude-skills",
+  "owner": {
+    "name": "greluoqixi",
+    "url": "https://github.com/greluoqixi"
+  },
+  "description": "Personal collection of Claude Code skills. Generate and maintain CLAUDE.md files for 10 project types including autonomous driving, robotics, and embedded systems.",
+  "plugins": [
+    {
+      "name": "claude-md-generator",
+      "source": "./plugins/claude-md-generator",
+      "description": "Generate and maintain CLAUDE.md files as intelligent codebase indexes for AI. Supports 10 project types.",
+      "version": "2.0.0",
+      "category": "development",
+      "keywords": ["claude-md", "documentation", "codebase-index", "project-structure"],
+      "strict": true
+    }
+  ]
+}
