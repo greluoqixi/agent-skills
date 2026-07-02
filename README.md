@@ -9,25 +9,25 @@ Add this marketplace to your agent:
 **Claude Code:**
 
 ```bash
-/plugin marketplace add greluoqixi/claude-skills
+/plugin marketplace add greluoqixi/agent-skills
 ```
 
 Then install any Claude Code plugin:
 
 ```bash
-/plugin install claude-md-generator@claude-skills
+/plugin install claude-md-generator@agent-skills
 ```
 
 **Codex CLI:**
 
 ```bash
-/codex plugin marketplace add greluoqixi/claude-skills
+/codex plugin marketplace add greluoqixi/agent-skills
 ```
 
 Then install any Codex plugin:
 
 ```bash
-/codex plugin install agents-md-generator@claude-skills
+/codex plugin install agents-md-generator@agent-skills
 ```
 
 ## Plugins
