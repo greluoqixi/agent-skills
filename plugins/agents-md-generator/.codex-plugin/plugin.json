@@ -1,0 +1,13 @@
+{
+  "name": "agents-md-generator",
+  "version": "1.0.0",
+  "description": "Generate and maintain AGENTS.md files as intelligent codebase indexes for Codex CLI. Automatically detects project type from 10 supported types, scans directory structure, reads key config files, and produces structured AGENTS.md files following best practices.",
+  "author": {
+    "name": "greluoqixi",
+    "url": "https://github.com/greluoqixi"
+  },
+  "license": "MIT",
+  "keywords": ["agents-md", "documentation", "codebase-index", "project-structure", "autonomous-driving", "robotics", "embedded", "codex"],
+  "category": "development",
+  "skills": ["./skills/agents-md-generator"]
+}

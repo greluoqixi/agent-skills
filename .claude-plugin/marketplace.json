@@ -14,6 +14,15 @@
       "category": "development",
       "keywords": ["claude-md", "documentation", "codebase-index", "project-structure"],
       "strict": true
+    },
+    {
+      "name": "agents-md-generator",
+      "source": "./plugins/agents-md-generator",
+      "description": "Generate and maintain AGENTS.md files as intelligent codebase indexes for Codex CLI. Supports 10 project types.",
+      "version": "1.0.0",
+      "category": "development",
+      "keywords": ["agents-md", "codex", "documentation", "codebase-index", "project-structure"],
+      "strict": false
     }
   ]
 }
