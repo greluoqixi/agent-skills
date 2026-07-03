@@ -157,6 +157,10 @@ Sections adapt per project type. Empty sections are omitted entirely.
 - {{CAVEAT}}
 {{/each}}
 {{/if}}
+
+## 维护规则
+
+当你在这个项目中新增、移动、重命名或删除文件/目录时，必须检查本文件是否需要更新以反映最新的项目结构。**请在变更完成后运行 claude-md-generator 技能同步本文件。**
 ```
 
 ## Conditional Logic

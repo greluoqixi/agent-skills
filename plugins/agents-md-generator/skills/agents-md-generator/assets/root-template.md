@@ -165,6 +165,10 @@ Support: Localization, HD-Map, Monitor/Guardian, Simulation
 - {{CAVEAT}}
 {{/each}}
 {{/if}}
+
+## Maintenance Rules
+
+When you create, move, rename, or delete files/directories in this project, you MUST check whether this file needs updating to reflect the latest project structure. **Run the agents-md-generator skill to sync this file after structural changes.**
 ```
 
 ## Conditional Logic
