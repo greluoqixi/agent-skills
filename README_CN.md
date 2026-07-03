@@ -96,6 +96,43 @@ ln -s $(pwd)/agent-skills/plugins/agents-md-generator/skills/agents-md-generator
   ~/.codex/skills/agents-md-generator
 ```
 
+## 更新
+
+刷新市场目录并将已安装的插件升级到最新版本：
+
+**Claude Code：**
+
+```bash
+# 刷新市场目录
+/plugin marketplace update
+
+# 升级插件到最新版本
+/plugin update claude-md-generator@agent-skills
+```
+
+如果 `update` 子命令不可用，则卸载后重装：
+
+```bash
+/plugin uninstall claude-md-generator
+/plugin install claude-md-generator@agent-skills
+```
+
+**Codex CLI：**
+
+```bash
+# 刷新市场目录
+codex plugin update
+
+# 重新添加插件获取最新版本
+codex plugin add agents-md-generator@agent-skills
+```
+
+**手动安装（软链接）：**
+
+```bash
+cd ~/agent-skills && git pull
+```
+
 ## 添加新插件
 
 1. 在 `plugins/<name>/` 下创建插件结构

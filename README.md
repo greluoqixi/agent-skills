@@ -96,6 +96,43 @@ ln -s $(pwd)/agent-skills/plugins/agents-md-generator/skills/agents-md-generator
   ~/.codex/skills/agents-md-generator
 ```
 
+## Updating
+
+Refresh the marketplace catalog and upgrade installed plugins to the latest version:
+
+**Claude Code:**
+
+```bash
+# Refresh marketplace catalog
+/plugin marketplace update
+
+# Upgrade plugin to latest version
+/plugin update claude-md-generator@agent-skills
+```
+
+If the `update` subcommand is not available, uninstall and reinstall:
+
+```bash
+/plugin uninstall claude-md-generator
+/plugin install claude-md-generator@agent-skills
+```
+
+**Codex CLI:**
+
+```bash
+# Refresh marketplace catalog
+codex plugin update
+
+# Re-add plugin to get latest version
+codex plugin add agents-md-generator@agent-skills
+```
+
+**Manual (symlink):**
+
+```bash
+cd ~/agent-skills && git pull
+```
+
 ## Adding New Plugins
 
 1. Create plugin structure under `plugins/<name>/`
