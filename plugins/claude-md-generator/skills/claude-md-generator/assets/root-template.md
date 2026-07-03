@@ -126,13 +126,13 @@ Sections adapt per project type. Empty sections are omitted entirely.
 {{/each}}
 {{/if}}
 
-{{#if HAS_HOOKS}}
 ## 自动化（由 hooks 处理）
+
+- 目录结构变更检测 → `SessionStart` hook（`.claude/check-stale.py`）
 
 {{#each HOOK_ITEMS}}
 - {{DESCRIPTION}} → `{{HOOK_EVENT}}` hook
 {{/each}}
-{{/if}}
 
 {{#if HAS_TOOLCHAIN}}
 ## 工具链

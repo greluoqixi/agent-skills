@@ -109,6 +109,28 @@ Read `assets/local-template.md`. Generate only when local toolchain differences 
 
 **Update manifest**: After all files are written, run `python scripts/manifest.py update <root>` to compute and store section hashes.
 
+**Install maintenance hook**: Copy `assets/check-stale.py` to `<root>/.claude/check-stale.py`. Then merge a SessionStart hook into `<root>/.claude/settings.json` (create if absent, preserve existing hooks):
+
+```json
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/check-stale.py"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+This hook runs at the start of every session. If directory structure changed since the last session (directories added, removed, or renamed), it injects a system-reminder telling Claude to review and sync CLAUDE.md. The reminder is emitted via stderr which the harness captures and surfaces.
+
 **Ask user** if ambiguous information encountered (unclear module purpose, ambiguous entry points, unclear architecture flow). Questions are single-choice or short-answer.
 
 ### Phase 4: Verify
@@ -204,3 +226,4 @@ Default commands by project type. Config file commands override these.
 - `assets/pipeline-module-template.md` — autonomous driving pipeline stage template
 - `assets/ros2-package-template.md` — ROS2 package documentation template
 - `assets/cps-layer-template.md` — embedded CPS layer template
+- `assets/check-stale.py` — SessionStart hook script that detects directory structure drift and reminds AI to sync CLAUDE.md
