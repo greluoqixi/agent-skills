@@ -42,25 +42,25 @@ Add this marketplace to your agent:
 **Claude Code:**
 
 ```bash
-/plugin marketplace add greluoqixi/agent-skills
+/plugin marketplace add greluoqixi/claude-skills
 ```
 
 Then install any Claude Code plugin:
 
 ```bash
-/plugin install claude-md-generator@agent-skills
+/plugin install claude-md-generator@claude-skills
 ```
 
 **Codex CLI:**
 
 ```bash
-codex plugin add greluoqixi/agent-skills
+codex plugin add greluoqixi/claude-skills
 ```
 
 Then install any Codex plugin:
 
 ```bash
-codex plugin add agents-md-generator@agent-skills
+codex plugin add agents-md-generator@claude-skills
 ```
 
 ## Plugins
@@ -107,14 +107,14 @@ Refresh the marketplace catalog and upgrade installed plugins to the latest vers
 /plugin marketplace update
 
 # Upgrade plugin to latest version
-/plugin update claude-md-generator@agent-skills
+/plugin update claude-md-generator@claude-skills
 ```
 
 If the `update` subcommand is not available, uninstall and reinstall:
 
 ```bash
 /plugin uninstall claude-md-generator
-/plugin install claude-md-generator@agent-skills
+/plugin install claude-md-generator@claude-skills
 ```
 
 **Codex CLI:**
@@ -124,7 +124,7 @@ If the `update` subcommand is not available, uninstall and reinstall:
 codex plugin update
 
 # Re-add plugin to get latest version
-codex plugin add agents-md-generator@agent-skills
+codex plugin add agents-md-generator@claude-skills
 ```
 
 **Manual (symlink):**
