@@ -121,7 +121,7 @@ If the `update` subcommand is not available, uninstall and reinstall:
 
 ```bash
 # Refresh marketplace catalog
-codex plugin update
+codex plugin marketplace upgrade
 
 # Re-add plugin to get latest version
 codex plugin add agents-md-generator@claude-skills
@@ -139,7 +139,7 @@ cd ~/agent-skills && git pull
 2. Add manifest: `.claude-plugin/plugin.json` for Claude Code, `.codex-plugin/plugin.json` for Codex CLI
 3. Add skills under `plugins/<name>/skills/`
 4. Register in `.claude-plugin/marketplace.json`
-5. Commit and push — users get updates via `/plugin marketplace update` (Claude Code) or `codex plugin update` (Codex CLI)
+5. Commit and push — users get updates via `/plugin marketplace update` (Claude Code) or `codex plugin marketplace upgrade` (Codex CLI)
 
 ## Repository Structure
 
