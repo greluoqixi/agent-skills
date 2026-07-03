@@ -28,6 +28,10 @@ This provides path-scoped context. Keep it concise (20-40 lines). Template adapt
 - **`{{PATH}}/`** -- {{PURPOSE}}{{#if HAS_AGENTSMD}} -> `{{PATH}}/AGENTS.md`{{/if}}
 {{/each}}
 {{/if}}
+
+## Maintenance Rules
+
+When files in this directory are added, moved, renamed, or deleted, check whether this AGENTS.md needs updating. **Run the agents-md-generator skill to sync.**
 ```
 
 ## Pipeline Stage (AutoDriving)

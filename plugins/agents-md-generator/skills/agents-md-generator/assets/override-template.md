@@ -36,6 +36,10 @@ These rules apply only when working in this directory and override the parent AG
 - {{RULE}}
 {{/each}}
 {{/if}}
+
+## Maintenance Rules
+
+When files in this directory are added, moved, renamed, or deleted, check whether this AGENTS.override.md needs updating. **Run the agents-md-generator skill to sync.**
 ```
 
 ## Usage Scenarios

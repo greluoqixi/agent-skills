@@ -50,4 +50,8 @@ For autonomous driving pipeline stages (Perception, Planning, Control, etc.).
 {{#each SAFETY_CONSTRAINTS}}
 - {{CONSTRAINT}}
 {{/each}}
+
+## Maintenance Rules
+
+When files in this directory are added, moved, renamed, or deleted, check whether this AGENTS.md needs updating. **Run the agents-md-generator skill to sync.**
 ```

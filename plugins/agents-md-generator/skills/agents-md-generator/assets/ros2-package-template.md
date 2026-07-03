@@ -57,4 +57,8 @@ For individual ROS2 packages in a robotics workspace.
 {{#each LAUNCH_FILES}}
 | `{{FILE}}` | {{DESCRIPTION}} |
 {{/each}}
+
+## Maintenance Rules
+
+When files in this directory are added, moved, renamed, or deleted, check whether this AGENTS.md needs updating. **Run the agents-md-generator skill to sync.**
 ```

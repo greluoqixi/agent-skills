@@ -54,4 +54,8 @@ For Cyber-Physical System layers in embedded projects.
 - ISR 中禁止: {{BANNED_IN_ISR}}
 - 临界区最大时长: {{CRITICAL_SECTION_MAX}}
 {{/if}}
+
+## 维护规则
+
+当本目录内文件新增、移动、重命名或删除时，检查本文件是否需要更新。**运行 claude-md-generator 技能同步。**
 ```

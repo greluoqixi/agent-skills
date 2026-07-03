@@ -73,8 +73,9 @@ def main() -> None:
     if previous_fp and previous_fp != current_fp:
         print(
             "Directory structure has changed since last session. "
-            "Review CLAUDE.md and run /claude-md-generator if module layout "
-            "no longer matches.",
+            "Review root CLAUDE.md AND all subdirectory CLAUDE.md files. "
+            "Run /claude-md-generator to sync any that no longer match "
+            "the module layout.",
             file=sys.stderr,
         )
 

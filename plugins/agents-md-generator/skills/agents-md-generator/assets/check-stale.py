@@ -71,8 +71,9 @@ def main() -> None:
     if previous_fp and previous_fp != current_fp:
         print(
             "Directory structure has changed since last check. "
-            "Review AGENTS.md and run /agents-md-generator if module layout "
-            "no longer matches.",
+            "Review root AGENTS.md AND all nested AGENTS.md files. "
+            "Run /agents-md-generator to sync any that no longer match "
+            "the module layout.",
             file=sys.stderr,
         )
 

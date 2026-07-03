@@ -168,7 +168,7 @@ Support: Localization, HD-Map, Monitor/Guardian, Simulation
 
 ## Maintenance Rules
 
-When you create, move, rename, or delete files/directories in this project, you MUST check whether this file needs updating to reflect the latest project structure. **Run the agents-md-generator skill to sync this file after structural changes.**
+When you create, move, rename, or delete files/directories in this project, you MUST check whether this file AND all nested AGENTS.md files in subdirectories need updating to reflect the latest project structure. **Run the agents-md-generator skill to sync all affected files after structural changes.**
 
 At the start of each session, run `python .codex/check-stale.py` to detect directory structure drift from external changes.
 ```

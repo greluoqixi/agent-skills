@@ -50,4 +50,8 @@ For autonomous driving pipeline stages (Perception, Planning, Control, etc.).
 {{#each SAFETY_CONSTRAINTS}}
 - {{CONSTRAINT}}
 {{/each}}
+
+## 维护规则
+
+当本目录内文件新增、移动、重命名或删除时，检查本文件是否需要更新。**运行 claude-md-generator 技能同步。**
 ```

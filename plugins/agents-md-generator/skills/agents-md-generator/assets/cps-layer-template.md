@@ -54,4 +54,8 @@ Managed by {{ALLOCATED_BY}} layer
 - Banned in ISR: {{BANNED_IN_ISR}}
 - Critical section max duration: {{CRITICAL_SECTION_MAX}}
 {{/if}}
+
+## Maintenance Rules
+
+When files in this directory are added, moved, renamed, or deleted, check whether this AGENTS.md needs updating. **Run the agents-md-generator skill to sync.**
 ```
