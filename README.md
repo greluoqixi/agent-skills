@@ -28,6 +28,15 @@ Three lines of defense against stale documentation:
 | **Soft** | Self-referential watchdog | Every generated file (root + subdirectories) contains a maintenance rule instructing the AI to sync after structural changes |
 | **Contextual** | Path-scoped rules | `.claude/rules/` (Claude Code) and nested `AGENTS.md` (Codex CLI) load only when the AI works in matching directories |
 
+### Bug Fix Knowledge Accumulation
+
+Capture hard-won debugging experience before context loss erases it. Each generated project gets a `TROUBLESHOOTING.md` template with a two-part record structure:
+
+- **Retrospect** — symptom, root cause chain, fix steps with file paths
+- **Prevention** — why AI went wrong, a check rule to verify before similar changes, related upstream/downstream modules
+
+Records use time-decay (6-month freshness window, stale tags for older entries). The root CLAUDE.md/AGENTS.md references the knowledge base via `@TROUBLESHOOTING.md`, and maintenance rules include a soft constraint to record non-obvious fixes.
+
 ### Domain-Specific Templates
 
 - **Autonomous Driving**: Pipeline-centric (Perception → Planning → Control), I/O topics, safety invariants
