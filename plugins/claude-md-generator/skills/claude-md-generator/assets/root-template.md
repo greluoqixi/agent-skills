@@ -158,16 +158,24 @@ Sections adapt per project type. Empty sections are omitted entirely.
 {{/each}}
 {{/if}}
 
+{{#if HAS_TROUBLESHOOTING}}
+## 经验知识库
+
+@TROUBLESHOOTING.md — 历史问题修复记录及预防规则。修改代码前，检查是否涉及已有记录的关联模块。
+{{/if}}
+
 ## 维护规则
 
 当你在这个项目中新增、移动、重命名或删除文件/目录时，必须检查本文件以及所有子目录下的 CLAUDE.md 文件是否需要更新。**请在变更完成后运行 claude-md-generator 技能同步所有相关文件。**
+
+当你花费显著精力定位并修复一个非显而易见的 bug 时，必须在 TROUBLESHOOTING.md 中追加一条记录，包含回溯（症状、根因、方案）和预防（犯错模式、检查规则、关联模块）两部分。
 ```
 
 ## Conditional Logic
 
 Sections are controlled by the 10-type selection table. Generator evaluates:
 1. Project type → domain-specific sections
-2. File existence → HAS_README, HAS_AGENTS, HAS_HOOKS
+2. File existence → HAS_README, HAS_AGENTS, HAS_TROUBLESHOOTING, HAS_HOOKS
 3. Content detection → HAS_CAVEATS, HAS_SAFETY_RULES, HAS_REALTIME
 4. Non-obviousness → CANNOT_BE_INFERRED
 

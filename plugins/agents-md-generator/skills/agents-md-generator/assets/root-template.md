@@ -166,18 +166,26 @@ Support: Localization, HD-Map, Monitor/Guardian, Simulation
 {{/each}}
 {{/if}}
 
+{{#if HAS_TROUBLESHOOTING}}
+## Knowledge Base
+
+@TROUBLESHOOTING.md — Historical fix records and prevention rules. Before modifying code, check whether it involves related modules from existing records.
+{{/if}}
+
 ## Maintenance Rules
 
 When you create, move, rename, or delete files/directories in this project, you MUST check whether this file AND all nested AGENTS.md files in subdirectories need updating to reflect the latest project structure. **Run the agents-md-generator skill to sync all affected files after structural changes.**
 
 At the start of each session, run `python .codex/check-stale.py` to detect directory structure drift from external changes.
+
+When you spend significant effort diagnosing and fixing a non-obvious bug, you MUST append a record to TROUBLESHOOTING.md with both Retrospect (symptoms, root cause, solution) and Prevention (mistake pattern, check rule, related modules) sections.
 ```
 
 ## Conditional Logic
 
 Sections are controlled by the 10-type selection table. Generator evaluates:
 1. Project type -> domain-specific sections
-2. File existence -> HAS_README, HAS_EXISTING_AGENTS, HAS_HOOKS
+2. File existence -> HAS_README, HAS_EXISTING_AGENTS, HAS_TROUBLESHOOTING, HAS_HOOKS
 3. Content detection -> HAS_CAVEATS, HAS_SAFETY_RULES, HAS_REALTIME
 4. Non-obviousness -> CANNOT_BE_INFERRED
 5. .codex/config.toml presence -> HAS_CODE_SANDBOX

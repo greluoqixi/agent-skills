@@ -127,6 +127,8 @@ Template adapts:
 - ROS2 packages -> `assets/ros2-package-template.md`
 - Embedded CPS layers -> `assets/cps-layer-template.md`
 
+**Install troubleshooting template**: If `./TROUBLESHOOTING.md` does not exist, copy `assets/troubleshooting-template.md` to `./TROUBLESHOOTING.md`. This file is user-maintained — the skill creates it once but never overwrites it during sync.
+
 **Update manifest**: After all files are written, run `python scripts/manifest.py update <root>` to compute and store section hashes in `.codex/.agents-md-state.json`.
 
 **Install drift detector**: Copy `assets/check-stale.py` to `<root>/.codex/check-stale.py`. Unlike Claude Code, Codex CLI has no native hooks system, so the script is invoked by the AGENTS.md maintenance rule (see root template) — Codex runs `python .codex/check-stale.py` when starting substantive work or after structural changes.
@@ -230,3 +232,4 @@ Default commands by project type. Config file commands override these.
 - `assets/ros2-package-template.md` — ROS2 package documentation template
 - `assets/cps-layer-template.md` — embedded CPS layer template
 - `assets/check-stale.py` — directory structure drift detector, run on-demand to check if AGENTS.md needs syncing
+- `assets/troubleshooting-template.md` — TROUBLESHOOTING.md template for recording bug fix knowledge with prevention rules

@@ -107,6 +107,8 @@ Read `assets/rules-template.md`. Generate only when cross-directory patterns are
 **Local overrides** (`./CLAUDE.local.md`):
 Read `assets/local-template.md`. Generate only when local toolchain differences are detected (personal conda env name, local port preferences).
 
+**Install troubleshooting template**: If `./TROUBLESHOOTING.md` does not exist, copy `assets/troubleshooting-template.md` to `./TROUBLESHOOTING.md`. This file is user-maintained — the skill creates it once but never overwrites it during sync.
+
 **Update manifest**: After all files are written, run `python scripts/manifest.py update <root>` to compute and store section hashes.
 
 **Install maintenance hook**: Copy `assets/check-stale.py` to `<root>/.claude/check-stale.py`. Then merge a SessionStart hook into `<root>/.claude/settings.json` (create if absent, preserve existing hooks):
@@ -227,3 +229,4 @@ Default commands by project type. Config file commands override these.
 - `assets/ros2-package-template.md` — ROS2 package documentation template
 - `assets/cps-layer-template.md` — embedded CPS layer template
 - `assets/check-stale.py` — SessionStart hook script that detects directory structure drift and reminds AI to sync CLAUDE.md
+- `assets/troubleshooting-template.md` — TROUBLESHOOTING.md template for recording bug fix knowledge with prevention rules
